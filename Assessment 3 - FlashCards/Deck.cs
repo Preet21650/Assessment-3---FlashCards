@@ -72,6 +72,21 @@ namespace Assessment_3___FlashCards
 
         public void Shufflecards()
         {
+            Random rnd = new Random();
+            for (int i = 0; i < 100; i++)
+            {
+                int z = rnd.Next(0, Cards.Length - 1);
+                int r = rnd.Next(0, Cards.Length - 1);
+                Card Temp = Cards[z];
+                Cards[z] = Cards[r];
+                Cards[r] = Temp;
+
+            }
+
+        }
+        public Card GetCard( int i)
+        {
+            return Cards[TopOfDeck];
 
         }
     }

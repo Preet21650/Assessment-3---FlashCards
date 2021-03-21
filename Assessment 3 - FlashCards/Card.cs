@@ -19,7 +19,7 @@ namespace Assessment_3___FlashCards
             Flipped = false;
         }
 
-        public string GetCard()
+        public string FlipCard()
         {
             if (Flipped == false)
             {
@@ -41,6 +41,15 @@ namespace Assessment_3___FlashCards
             {
                 Flipped = true;
             }
+        }
+
+        public string GetDef()
+        {
+            return Def;
+        }
+        public string GetWord()
+        {
+            return Word;
         }
     }
 
