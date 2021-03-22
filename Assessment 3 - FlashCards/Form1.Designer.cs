@@ -47,93 +47,125 @@ namespace Assessment_3___FlashCards
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(214, 19);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(428, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 55);
+            this.label1.Size = new System.Drawing.Size(513, 108);
             this.label1.TabIndex = 0;
             this.label1.Text = "Flashcards";
             // 
             // prevbutton
             // 
-            this.prevbutton.Location = new System.Drawing.Point(185, 309);
+            this.prevbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prevbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.prevbutton.Location = new System.Drawing.Point(370, 594);
+            this.prevbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.prevbutton.Name = "prevbutton";
-            this.prevbutton.Size = new System.Drawing.Size(75, 23);
+            this.prevbutton.Size = new System.Drawing.Size(150, 44);
             this.prevbutton.TabIndex = 2;
             this.prevbutton.Text = "Back";
-            this.prevbutton.UseVisualStyleBackColor = true;
+            this.prevbutton.UseVisualStyleBackColor = false;
+            this.prevbutton.Click += new System.EventHandler(this.prevbutton_Click);
             // 
             // flipbutton
             // 
-            this.flipbutton.Location = new System.Drawing.Point(345, 309);
+            this.flipbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flipbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flipbutton.ForeColor = System.Drawing.Color.Red;
+            this.flipbutton.Location = new System.Drawing.Point(672, 578);
+            this.flipbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.flipbutton.Name = "flipbutton";
-            this.flipbutton.Size = new System.Drawing.Size(75, 23);
+            this.flipbutton.Size = new System.Drawing.Size(184, 70);
             this.flipbutton.TabIndex = 3;
             this.flipbutton.Text = "Flip!!";
-            this.flipbutton.UseVisualStyleBackColor = true;
+            this.flipbutton.UseVisualStyleBackColor = false;
+            this.flipbutton.Click += new System.EventHandler(this.flipbutton_Click);
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(485, 309);
+            this.nextbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nextbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nextbutton.Location = new System.Drawing.Point(970, 594);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(75, 23);
+            this.nextbutton.Size = new System.Drawing.Size(150, 44);
             this.nextbutton.TabIndex = 4;
             this.nextbutton.Text = "Next";
-            this.nextbutton.UseVisualStyleBackColor = true;
+            this.nextbutton.UseVisualStyleBackColor = false;
+            this.nextbutton.Click += new System.EventHandler(this.nextbutton_Click);
             // 
             // randombutton
             // 
-            this.randombutton.Location = new System.Drawing.Point(26, 392);
+            this.randombutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.randombutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.randombutton.Location = new System.Drawing.Point(116, 754);
+            this.randombutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.randombutton.Name = "randombutton";
-            this.randombutton.Size = new System.Drawing.Size(75, 23);
+            this.randombutton.Size = new System.Drawing.Size(150, 44);
             this.randombutton.TabIndex = 5;
             this.randombutton.Text = "Random";
-            this.randombutton.UseVisualStyleBackColor = true;
+            this.randombutton.UseVisualStyleBackColor = false;
+            this.randombutton.Click += new System.EventHandler(this.randombutton_Click);
             // 
             // shufflebutton
             // 
-            this.shufflebutton.Location = new System.Drawing.Point(694, 392);
+            this.shufflebutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shufflebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.shufflebutton.Location = new System.Drawing.Point(1316, 754);
+            this.shufflebutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.shufflebutton.Name = "shufflebutton";
-            this.shufflebutton.Size = new System.Drawing.Size(75, 23);
+            this.shufflebutton.Size = new System.Drawing.Size(150, 44);
             this.shufflebutton.TabIndex = 6;
             this.shufflebutton.Text = "Shuffle";
-            this.shufflebutton.UseVisualStyleBackColor = true;
+            this.shufflebutton.UseVisualStyleBackColor = false;
+            this.shufflebutton.Click += new System.EventHandler(this.shufflebutton_Click);
             // 
             // FilePicker
             // 
             this.FilePicker.FormattingEnabled = true;
-            this.FilePicker.Location = new System.Drawing.Point(183, 98);
+            this.FilePicker.Location = new System.Drawing.Point(366, 188);
+            this.FilePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.FilePicker.Name = "FilePicker";
-            this.FilePicker.Size = new System.Drawing.Size(279, 21);
+            this.FilePicker.Size = new System.Drawing.Size(554, 33);
             this.FilePicker.TabIndex = 7;
             this.FilePicker.SelectedIndexChanged += new System.EventHandler(this.FilePicker_SelectedIndexChanged);
             // 
             // loadbutton
             // 
-            this.loadbutton.Location = new System.Drawing.Point(485, 98);
+            this.loadbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.loadbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadbutton.Location = new System.Drawing.Point(970, 188);
+            this.loadbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.loadbutton.Name = "loadbutton";
-            this.loadbutton.Size = new System.Drawing.Size(75, 23);
+            this.loadbutton.Size = new System.Drawing.Size(150, 44);
             this.loadbutton.TabIndex = 8;
             this.loadbutton.Text = "Load";
-            this.loadbutton.UseVisualStyleBackColor = true;
+            this.loadbutton.UseVisualStyleBackColor = false;
             this.loadbutton.Click += new System.EventHandler(this.loadbutton_Click);
             // 
             // browsebutton
             // 
-            this.browsebutton.Location = new System.Drawing.Point(566, 98);
+            this.browsebutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.browsebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.browsebutton.Location = new System.Drawing.Point(1132, 188);
+            this.browsebutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.browsebutton.Name = "browsebutton";
-            this.browsebutton.Size = new System.Drawing.Size(75, 23);
+            this.browsebutton.Size = new System.Drawing.Size(150, 44);
             this.browsebutton.TabIndex = 9;
             this.browsebutton.Text = "Browse";
-            this.browsebutton.UseVisualStyleBackColor = true;
+            this.browsebutton.UseVisualStyleBackColor = false;
             this.browsebutton.Click += new System.EventHandler(this.browsebutton_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(147, 99);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(294, 190);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 16);
+            this.label2.Size = new System.Drawing.Size(55, 30);
             this.label2.TabIndex = 10;
             this.label2.Text = "File";
             // 
@@ -143,17 +175,21 @@ namespace Assessment_3___FlashCards
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(185, 160);
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBox1.Location = new System.Drawing.Point(370, 308);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(375, 119);
+            this.richTextBox1.Size = new System.Drawing.Size(746, 225);
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.browsebutton);
@@ -165,6 +201,7 @@ namespace Assessment_3___FlashCards
             this.Controls.Add(this.flipbutton);
             this.Controls.Add(this.prevbutton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

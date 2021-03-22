@@ -12,9 +12,11 @@ namespace Assessment_3___FlashCards
 {
     public partial class Form1 : Form
     {
-        private string FileName, SFileName;
+        private string SFileName;
+        private string FileName;
         private int DC = 0;
-        private Deck[] Decks;
+        private int Index = 0;
+        Deck[] Decks;
         private int FileI;
         public Form1()
         {
@@ -35,16 +37,16 @@ namespace Assessment_3___FlashCards
 
         private void loadbutton_Click(object sender, EventArgs e)
         {
-            Decks[DC] = new Deck(SFileName);
+            Decks[DC] = new Deck(FileName);
             AddDeck();
+            Index = DC;
             DC += 1;
         }
 
         private void FilePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             FileI = FilePicker.SelectedIndex;
-            richTextBox1.Text = Decks[FileI].GetCard(0).GetWord();
-
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
         }
 
         public void AddDeck()
@@ -52,7 +54,37 @@ namespace Assessment_3___FlashCards
             FilePicker.Items.Add(SFileName);
         }
 
+        private void flipbutton_Click(object sender, EventArgs e)
+        {
+            Decks[Index].GetCard().Flip();
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
+        }
 
+        private void nextbutton_Click(object sender, EventArgs e)
+        {
+            Decks[Index].NextCard();
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
 
+        }
+
+        private void prevbutton_Click(object sender, EventArgs e)
+        {
+            Decks[Index].PreviousCard();
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
+        }
+
+        private void randombutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shufflebutton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

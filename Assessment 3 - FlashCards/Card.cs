@@ -42,14 +42,17 @@ namespace Assessment_3___FlashCards
                 Flipped = true;
             }
         }
-
-        public string GetDef()
+        public string GetCardText()
         {
-            return Def;
-        }
-        public string GetWord()
-        {
-            return Word;
+            if (Flipped == false)
+            {
+                return Word;
+            }
+            else
+            {
+                return Def;
+            }
+            
         }
     }
 

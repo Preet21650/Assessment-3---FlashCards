@@ -15,8 +15,10 @@ namespace Assessment_3___FlashCards
 
         public Deck(string FileName)
         {
+            this.FileName = FileName;
             Cards = new Card[1000];
             TopOfDeck = 0;
+            LoadCards();
         }
 
         public void LoadCards()
@@ -30,7 +32,7 @@ namespace Assessment_3___FlashCards
 
 
             fileReader = new StreamReader(FileName);
-            string line = fileReader.ReadLine();
+            string line = "";
             Card[] cards = new Card[length - 1];
             int count = 0;
             while ((line = fileReader.ReadLine()) != null)
@@ -84,10 +86,15 @@ namespace Assessment_3___FlashCards
             }
 
         }
-        public Card GetCard( int i)
+        public Card GetCard()
         {
             return Cards[TopOfDeck];
 
+        }
+
+        public int GetCardIndex()
+        {
+            return TopOfDeck;
         }
     }
 }
