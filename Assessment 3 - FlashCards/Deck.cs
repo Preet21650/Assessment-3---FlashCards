@@ -11,13 +11,12 @@ namespace Assessment_3___FlashCards
     {
         private string FileName;
         private Card[] Cards;
-        private int TopOfDeck;
+        private int TopOfDeck = 0;
 
         public Deck(string FileName)
         {
             this.FileName = FileName;
-            Cards = new Card[1000];
-            TopOfDeck = 0;
+            
             LoadCards();
         }
 
@@ -33,7 +32,7 @@ namespace Assessment_3___FlashCards
 
             fileReader = new StreamReader(FileName);
             string line = "";
-            Card[] cards = new Card[length - 1];
+             Cards = new Card[length];
             int count = 0;
             while ((line = fileReader.ReadLine()) != null)
             {
@@ -44,9 +43,8 @@ namespace Assessment_3___FlashCards
                 count++;
 
             }
-
-
         }
+
         public void NextCard()
         {
             TopOfDeck++;
@@ -77,19 +75,17 @@ namespace Assessment_3___FlashCards
             Random rnd = new Random();
             for (int i = 0; i < 100; i++)
             {
-                int z = rnd.Next(0, Cards.Length - 1);
+                int n = rnd.Next(0, Cards.Length - 1);
                 int r = rnd.Next(0, Cards.Length - 1);
-                Card Temp = Cards[z];
-                Cards[z] = Cards[r];
+                Card Temp = Cards[n];
+                Cards[n] = Cards[r];
                 Cards[r] = Temp;
-
             }
-
         }
+
         public Card GetCard()
         {
             return Cards[TopOfDeck];
-
         }
 
         public int GetCardIndex()

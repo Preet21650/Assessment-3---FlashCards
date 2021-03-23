@@ -75,11 +75,14 @@ namespace Assessment_3___FlashCards
 
         private void randombutton_Click(object sender, EventArgs e)
         {
-
+            Decks[Index].RandomCard();
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
         }
 
         private void shufflebutton_Click(object sender, EventArgs e)
         {
+            Decks[Index].Shufflecards();
+            richTextBox1.Text = Decks[Index].GetCard().GetCardText();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
