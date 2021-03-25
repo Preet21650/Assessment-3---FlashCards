@@ -18,6 +18,7 @@ namespace Assessment_3___FlashCards
         private int Index = 0;
         Deck[] Decks;
         private int FileI;
+
         public Form1()
         {
             InitializeComponent();
@@ -78,16 +79,43 @@ namespace Assessment_3___FlashCards
             Decks[Index].RandomCard();
             richTextBox1.Text = Decks[Index].GetCard().GetCardText();
         }
-
         private void shufflebutton_Click(object sender, EventArgs e)
         {
             Decks[Index].Shufflecards();
             richTextBox1.Text = Decks[Index].GetCard().GetCardText();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void FontButton_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                richTextBox1.Font = fontDialog1.Font;
+
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
+
+        private void TestButton_Click(object sender, EventArgs e)
+        {
+            TestModeButtons();
+            TimerTextBox.Text = "00:00:00";
+        }
+
+        private void TestModeButtons()
+        {
+            TimerTextBox.Visible = true;
+            StartButton.Visible = true;
+            StopButton.Visible = true;
+            AnswerLabel.Visible = true;
+            AnswerTextBox.Visible = true;
+            EnterButton.Visible = true;
+
+        }
+
+
     }
 }

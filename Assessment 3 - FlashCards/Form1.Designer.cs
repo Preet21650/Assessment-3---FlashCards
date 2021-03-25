@@ -29,6 +29,7 @@ namespace Assessment_3___FlashCards
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.prevbutton = new System.Windows.Forms.Button();
             this.flipbutton = new System.Windows.Forms.Button();
@@ -41,6 +42,17 @@ namespace Assessment_3___FlashCards
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TestButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.FontButton = new System.Windows.Forms.Button();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TimerTextBox = new System.Windows.Forms.RichTextBox();
+            this.StartButton = new System.Windows.Forms.Button();
+            this.StopButton = new System.Windows.Forms.Button();
+            this.AnswerTextBox = new System.Windows.Forms.RichTextBox();
+            this.AnswerLabel = new System.Windows.Forms.Label();
+            this.EnterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,11 +70,12 @@ namespace Assessment_3___FlashCards
             // prevbutton
             // 
             this.prevbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prevbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prevbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.prevbutton.Location = new System.Drawing.Point(370, 594);
-            this.prevbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prevbutton.Location = new System.Drawing.Point(388, 576);
+            this.prevbutton.Margin = new System.Windows.Forms.Padding(6);
             this.prevbutton.Name = "prevbutton";
-            this.prevbutton.Size = new System.Drawing.Size(150, 44);
+            this.prevbutton.Size = new System.Drawing.Size(153, 54);
             this.prevbutton.TabIndex = 2;
             this.prevbutton.Text = "Back";
             this.prevbutton.UseVisualStyleBackColor = false;
@@ -73,8 +86,8 @@ namespace Assessment_3___FlashCards
             this.flipbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.flipbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flipbutton.ForeColor = System.Drawing.Color.Red;
-            this.flipbutton.Location = new System.Drawing.Point(672, 578);
-            this.flipbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flipbutton.Location = new System.Drawing.Point(681, 567);
+            this.flipbutton.Margin = new System.Windows.Forms.Padding(6);
             this.flipbutton.Name = "flipbutton";
             this.flipbutton.Size = new System.Drawing.Size(184, 70);
             this.flipbutton.TabIndex = 3;
@@ -85,11 +98,12 @@ namespace Assessment_3___FlashCards
             // nextbutton
             // 
             this.nextbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.nextbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nextbutton.Location = new System.Drawing.Point(970, 594);
-            this.nextbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nextbutton.Location = new System.Drawing.Point(988, 580);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(6);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(150, 44);
+            this.nextbutton.Size = new System.Drawing.Size(160, 54);
             this.nextbutton.TabIndex = 4;
             this.nextbutton.Text = "Next";
             this.nextbutton.UseVisualStyleBackColor = false;
@@ -98,11 +112,12 @@ namespace Assessment_3___FlashCards
             // randombutton
             // 
             this.randombutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.randombutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.randombutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.randombutton.Location = new System.Drawing.Point(116, 754);
-            this.randombutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.randombutton.Location = new System.Drawing.Point(96, 747);
+            this.randombutton.Margin = new System.Windows.Forms.Padding(6);
             this.randombutton.Name = "randombutton";
-            this.randombutton.Size = new System.Drawing.Size(150, 44);
+            this.randombutton.Size = new System.Drawing.Size(150, 55);
             this.randombutton.TabIndex = 5;
             this.randombutton.Text = "Random";
             this.randombutton.UseVisualStyleBackColor = false;
@@ -111,11 +126,12 @@ namespace Assessment_3___FlashCards
             // shufflebutton
             // 
             this.shufflebutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.shufflebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shufflebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.shufflebutton.Location = new System.Drawing.Point(1316, 754);
-            this.shufflebutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.shufflebutton.Location = new System.Drawing.Point(1373, 747);
+            this.shufflebutton.Margin = new System.Windows.Forms.Padding(6);
             this.shufflebutton.Name = "shufflebutton";
-            this.shufflebutton.Size = new System.Drawing.Size(150, 44);
+            this.shufflebutton.Size = new System.Drawing.Size(170, 52);
             this.shufflebutton.TabIndex = 6;
             this.shufflebutton.Text = "Shuffle";
             this.shufflebutton.UseVisualStyleBackColor = false;
@@ -124,8 +140,8 @@ namespace Assessment_3___FlashCards
             // FilePicker
             // 
             this.FilePicker.FormattingEnabled = true;
-            this.FilePicker.Location = new System.Drawing.Point(366, 188);
-            this.FilePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FilePicker.Location = new System.Drawing.Point(388, 189);
+            this.FilePicker.Margin = new System.Windows.Forms.Padding(6);
             this.FilePicker.Name = "FilePicker";
             this.FilePicker.Size = new System.Drawing.Size(554, 33);
             this.FilePicker.TabIndex = 7;
@@ -135,8 +151,8 @@ namespace Assessment_3___FlashCards
             // 
             this.loadbutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.loadbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.loadbutton.Location = new System.Drawing.Point(970, 188);
-            this.loadbutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.loadbutton.Location = new System.Drawing.Point(992, 189);
+            this.loadbutton.Margin = new System.Windows.Forms.Padding(6);
             this.loadbutton.Name = "loadbutton";
             this.loadbutton.Size = new System.Drawing.Size(150, 44);
             this.loadbutton.TabIndex = 8;
@@ -148,8 +164,8 @@ namespace Assessment_3___FlashCards
             // 
             this.browsebutton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.browsebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.browsebutton.Location = new System.Drawing.Point(1132, 188);
-            this.browsebutton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.browsebutton.Location = new System.Drawing.Point(1154, 189);
+            this.browsebutton.Margin = new System.Windows.Forms.Padding(6);
             this.browsebutton.Name = "browsebutton";
             this.browsebutton.Size = new System.Drawing.Size(150, 44);
             this.browsebutton.TabIndex = 9;
@@ -162,7 +178,7 @@ namespace Assessment_3___FlashCards
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(294, 190);
+            this.label2.Location = new System.Drawing.Point(316, 191);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 30);
@@ -176,13 +192,110 @@ namespace Assessment_3___FlashCards
             // richTextBox1
             // 
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.richTextBox1.Location = new System.Drawing.Point(370, 308);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richTextBox1.Location = new System.Drawing.Point(388, 295);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(746, 225);
+            this.richTextBox1.Size = new System.Drawing.Size(760, 225);
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // TestButton
+            // 
+            this.TestButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestButton.ForeColor = System.Drawing.Color.Red;
+            this.TestButton.Location = new System.Drawing.Point(48, 603);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(282, 68);
+            this.TestButton.TabIndex = 12;
+            this.TestButton.Text = "Test mode";
+            this.TestButton.UseVisualStyleBackColor = false;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
+            // 
+            // FontButton
+            // 
+            this.FontButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FontButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FontButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FontButton.Location = new System.Drawing.Point(681, 744);
+            this.FontButton.Name = "FontButton";
+            this.FontButton.Size = new System.Drawing.Size(248, 55);
+            this.FontButton.TabIndex = 13;
+            this.FontButton.Text = "Change Font";
+            this.FontButton.UseVisualStyleBackColor = false;
+            this.FontButton.Click += new System.EventHandler(this.FontButton_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // TimerTextBox
+            // 
+            this.TimerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimerTextBox.Location = new System.Drawing.Point(34, 295);
+            this.TimerTextBox.Name = "TimerTextBox";
+            this.TimerTextBox.Size = new System.Drawing.Size(275, 66);
+            this.TimerTextBox.TabIndex = 14;
+            this.TimerTextBox.Text = "";
+            this.TimerTextBox.Visible = false;
+            // 
+            // StartButton
+            // 
+            this.StartButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.StartButton.Location = new System.Drawing.Point(108, 406);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(134, 60);
+            this.StartButton.TabIndex = 15;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Visible = false;
+            // 
+            // StopButton
+            // 
+            this.StopButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.StopButton.Location = new System.Drawing.Point(108, 503);
+            this.StopButton.Name = "StopButton";
+            this.StopButton.Size = new System.Drawing.Size(134, 67);
+            this.StopButton.TabIndex = 16;
+            this.StopButton.Text = "Stop";
+            this.StopButton.UseVisualStyleBackColor = false;
+            this.StopButton.Visible = false;
+            // 
+            // AnswerTextBox
+            // 
+            this.AnswerTextBox.Location = new System.Drawing.Point(1305, 319);
+            this.AnswerTextBox.Name = "AnswerTextBox";
+            this.AnswerTextBox.Size = new System.Drawing.Size(273, 57);
+            this.AnswerTextBox.TabIndex = 17;
+            this.AnswerTextBox.Text = "";
+            this.AnswerTextBox.Visible = false;
+            // 
+            // AnswerLabel
+            // 
+            this.AnswerLabel.AutoSize = true;
+            this.AnswerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AnswerLabel.Location = new System.Drawing.Point(1157, 330);
+            this.AnswerLabel.Name = "AnswerLabel";
+            this.AnswerLabel.Size = new System.Drawing.Size(142, 37);
+            this.AnswerLabel.TabIndex = 18;
+            this.AnswerLabel.Text = "Answer :";
+            this.AnswerLabel.Visible = false;
+            // 
+            // EnterButton
+            // 
+            this.EnterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterButton.Location = new System.Drawing.Point(1373, 412);
+            this.EnterButton.Name = "EnterButton";
+            this.EnterButton.Size = new System.Drawing.Size(119, 47);
+            this.EnterButton.TabIndex = 19;
+            this.EnterButton.Text = "Enter";
+            this.EnterButton.UseVisualStyleBackColor = true;
+            this.EnterButton.Visible = false;
             // 
             // Form1
             // 
@@ -190,6 +303,14 @@ namespace Assessment_3___FlashCards
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.EnterButton);
+            this.Controls.Add(this.AnswerLabel);
+            this.Controls.Add(this.AnswerTextBox);
+            this.Controls.Add(this.StopButton);
+            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.TimerTextBox);
+            this.Controls.Add(this.FontButton);
+            this.Controls.Add(this.TestButton);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.browsebutton);
@@ -201,7 +322,7 @@ namespace Assessment_3___FlashCards
             this.Controls.Add(this.flipbutton);
             this.Controls.Add(this.prevbutton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -223,6 +344,17 @@ namespace Assessment_3___FlashCards
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button TestButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button FontButton;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.RichTextBox TimerTextBox;
+        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Button StopButton;
+        private System.Windows.Forms.RichTextBox AnswerTextBox;
+        private System.Windows.Forms.Label AnswerLabel;
+        private System.Windows.Forms.Button EnterButton;
     }
 }
 
