@@ -18,6 +18,7 @@ namespace Assessment_3___FlashCards
         private int Index = 0;
         Deck[] Decks;
         private int FileI;
+        private int Min,Sec,MS;
 
         public Form1()
         {
@@ -114,6 +115,28 @@ namespace Assessment_3___FlashCards
             AnswerTextBox.Visible = true;
             EnterButton.Visible = true;
 
+        }
+
+        public String GetTime()
+        {
+            string Min = m.ToString();
+            string Sec = s.ToString();
+            string MS = ms.ToString();
+
+            if (Sec.length == 1)
+            {
+                Sec = "0" + Sec;
+            } 
+            if (Min.length == 1)
+            {
+                Min = "0" + Min;
+            }
+            if (MS.length == 1)
+            {
+                MS = "0" + Ms;
+            }
+
+            return Min + ":" + Sec + ":" + MS;
         }
 
 
