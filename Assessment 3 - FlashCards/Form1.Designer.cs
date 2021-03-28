@@ -202,7 +202,7 @@ namespace Assessment_3___FlashCards
             this.TestButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestButton.ForeColor = System.Drawing.Color.Red;
-            this.TestButton.Location = new System.Drawing.Point(111, 446);
+            this.TestButton.Location = new System.Drawing.Point(93, 401);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(282, 68);
             this.TestButton.TabIndex = 12;

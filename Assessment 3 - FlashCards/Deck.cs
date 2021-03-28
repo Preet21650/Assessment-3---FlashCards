@@ -9,11 +9,13 @@ namespace Assessment_3___FlashCards
 {
     class Deck
     {
-        private string FileName;
-        private Card[] Cards;
-        private int TopOfDeck = 0;
-        private int length;
+        //Attributes
+        private string FileName;// The Filename of the deck is loaded into the program
+        private Card[] Cards; // array of cards in the deck
+        private int TopOfDeck = 0; // top card in the deck
+        private int length; // length of the deck
 
+        //Constructor 
         public Deck(string FileName)
         {
             this.FileName = FileName;
@@ -21,6 +23,11 @@ namespace Assessment_3___FlashCards
             LoadCards();
         }
 
+        // Methods
+
+        /// <summary>
+        /// A Method to load the file with the cards into the program 
+        /// </summary>
         public void LoadCards()
         {
             StreamReader fileReader = new StreamReader(FileName);
@@ -45,6 +52,9 @@ namespace Assessment_3___FlashCards
             }
         }
 
+        /// <summary>
+        /// A method to get the next card in the deck 
+        /// </summary>
         public void NextCard()
         {
             TopOfDeck++;
@@ -54,6 +64,9 @@ namespace Assessment_3___FlashCards
             }
         }
 
+        /// <summary>
+        /// A method to get the previous card in the deck
+        /// </summary>
         public void PreviousCard()
         {
             if(TopOfDeck <= 0)
@@ -63,6 +76,9 @@ namespace Assessment_3___FlashCards
             TopOfDeck--;
         }
 
+        /// <summary>
+        /// A method the get a random card in the deck 
+        /// </summary>
         public void RandomCard()
         {
             Random RandomCard = new Random();
@@ -70,6 +86,9 @@ namespace Assessment_3___FlashCards
 
         }
 
+        /// <summary>
+        /// A method to shuffle up all the cards in the deck
+        /// </summary>
         public void Shufflecards()
         {
             Random rnd = new Random();
@@ -82,29 +101,43 @@ namespace Assessment_3___FlashCards
                 Cards[r] = Temp;
             }
         }
-
-        public Card GetCard()
-        {
-            return Cards[TopOfDeck];
-        }
+        /// <summary>
+        /// A method that resets the deck 
+        /// </summary>
         public void Resetdeck()
         {
             TopOfDeck = 0;
         }
 
+        //Accessors
+
+        /// <summary>
+        /// To get the card that is on top of the deck
+        /// </summary>
+        /// <returns>returns the card that is on top of the deck </returns>
+        public Card GetCard()
+        {
+            return Cards[TopOfDeck];
+        }
+
+        /// <summary>
+  
+        /// <summary>
+        /// To return the current card that is on top of the deck
+        /// </summary>
+        /// <returns> the card that is on top of the deck </returns>
         public int GetCardIndex()
         {
             return TopOfDeck;
         }
 
+        /// <summary>
+        /// to get the number of cards in the deck
+        /// </summary>
+        /// <returns> The number of cards in the deck</returns>
         public int GetDeckLength()
         {
             return length ;
-        }
-
-        public void GetTestmode()
-        {
-            GetTestmode();
         }
     }
 }
