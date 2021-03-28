@@ -54,6 +54,14 @@ namespace Assessment_3___FlashCards
             }
             
         }
+        public bool isFlipped()
+        {
+            return Flipped;
+        }
+        public string GetWord()
+        {
+            return Word;
+        }
     }
 
 }

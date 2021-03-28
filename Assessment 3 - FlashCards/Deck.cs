@@ -12,6 +12,7 @@ namespace Assessment_3___FlashCards
         private string FileName;
         private Card[] Cards;
         private int TopOfDeck = 0;
+        private int length;
 
         public Deck(string FileName)
         {
@@ -22,7 +23,6 @@ namespace Assessment_3___FlashCards
 
         public void LoadCards()
         {
-            int length = 0;
             StreamReader fileReader = new StreamReader(FileName);
             while ((fileReader.ReadLine()) != null)
             {
@@ -87,10 +87,24 @@ namespace Assessment_3___FlashCards
         {
             return Cards[TopOfDeck];
         }
+        public void Resetdeck()
+        {
+            TopOfDeck = 0;
+        }
 
         public int GetCardIndex()
         {
             return TopOfDeck;
+        }
+
+        public int GetDeckLength()
+        {
+            return length ;
+        }
+
+        public void GetTestmode()
+        {
+            GetTestmode();
         }
     }
 }
